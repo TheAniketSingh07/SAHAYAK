@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a child</title>
+    <style>
+        #adoption-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #FF5733; /* A warm color for the button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E04E30;
+}
+    </style>
+</head>
+<body>
+
+<section id="adoption-form">
+    <h2>Adoption Application Form</h2>
+    <form action="submit_application.php" method="post">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <label for="preferredChildAge">Preferred Age of Child:</label>
+        <select id="preferredChildAge" name="preferredChildAge">
+            <option value="0-5">0-5 years</option>
+            <option value="6-10">6-10 years</option>
+            <option value="11-15">11-15 years</option>
+            <option value="16-18">16-18 years</option>
+        </select>
+
+        <label for="experience">Do you have prior experience with children?</label>
+        <select id="experience" name="experience">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="message">Additional Information or Questions:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</section>
+
+</body>
+</html>
